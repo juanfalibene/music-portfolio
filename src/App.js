@@ -1,17 +1,9 @@
-import { Home } from './components/Home';
-import { Services } from './components/Services';
-import { Portfolio } from './components/Portfolio';
-import { Resume } from './components/Resume';
-import { Contact } from './components/Contact';
+import { MyRoutes } from './router/MyRoutes';
 
 function App() {
   return (
-    <div>
-      <Home />
-      <Services />
-      <Portfolio />
-      <Resume />
-      <Contact />
+    <div className='layout'>
+      <MyRoutes />
     </div>
   );
 }

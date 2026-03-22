@@ -11,7 +11,10 @@ export const SpotlightList = ({ category }) => {
 
   return category.slice(0, 1).map((sesh) => {
     return (
-      <article className={"spotlight-card"} key={sesh.category + sesh.id}>
+      <article
+        className={`spotlight-card ${sesh.category}`}
+        key={sesh.category + sesh.id}
+      >
         {loadPlayer === true && (
           <AudioPlayerHome
             title={sesh.title}
@@ -40,6 +43,7 @@ export const SpotlightList = ({ category }) => {
           <div className='sc-button-container'>
             <button
               key={sesh.id}
+              className='play-button'
               onClick={() =>
                 playEmbed(sesh.embed, sesh.id, sesh.title, sesh.category)
               }
@@ -47,7 +51,7 @@ export const SpotlightList = ({ category }) => {
               PLAY
             </button>
             <Link to={"/" + sesh.category}>
-              <button key={sesh.category} className='spotlight-button'>
+              <button key={sesh.category} className='explore-button'>
                 Explore {sesh.category}
               </button>
             </Link>
