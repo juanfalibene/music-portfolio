@@ -13,12 +13,20 @@ export const About = () => {
           <div className='about-text'>
             <p>
               Hello, and good day! I'm a Disc Jockey and music selector with a
-              deep passion for listening, selecting, mixing, and sharing
-              music—an endless loop that has shaped my journey and will continue
+              deep passion for listening, selecting, mixing, and sharing music.
+              It's an endless loop that has shaped my journey and will continue
               to do so for life. My musical focus spans across Soul, Funk,
               Modern Soul, Rare Groove, and Jazz, always seeking to create
               meaningful connections through sound. More than anything, I simply
               love sharing music.
+            </p>
+
+            <p>
+              Alongside this foundation, I also feel a strong connection to club
+              culture and its atmosphere. I’m particularly drawn to Disco and
+              House music, especially in sessions that blend the organic essence
+              of sampled material with the energy and texture of electronic
+              music.
             </p>
 
             <p>
@@ -44,13 +52,13 @@ export const About = () => {
 
             <p className='text-subscribe'>
               For upcoming sessions and new music discoveries, feel free to
-              connect with me 🙂
+              connect with me.
             </p>
           </div>
 
           <div className='about-image'>
             <img
-              src='/img/r005.jpg'
+              src='/img/r005.jpeg'
               alt='Juan Falibene DJ session'
               loading='lazy'
             />
