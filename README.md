@@ -1,46 +1,70 @@
-# 🎵 Juan Falibene — Music Portfolio & Front End Developer
+# Getting Started with Create React App
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/OpenAI%20/%20AI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="AI & Automation" />
-</p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-### 👋 Hola, I'm **Juan Falibene**
+In the project directory, you can run:
 
-A creative Front End Developer and DJ/Selector based in Spain. I love bridging the gap between elegant UI design, modern web technologies, and the art of curation (both in code and music).
+### `npm start`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## ⚡ Quick Overview
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-* **👀 Front End Specialist:** Passionate about building beautiful, highly interactive, and responsive user interfaces that deliver exceptional user experiences.
-* **🌱 AI & Automation Enthusiast:** Currently diving deep into Artificial Intelligence, workflow automation, and level-upping my **Python** skills to build smarter, more efficient tools.
-* **🤖 Integrating Intelligent Systems:** Focusing on integrating AI APIs/models into web applications and automating repetitive daily tasks to supercharge productivity.
-* **💻 Technical Stack & Learning:** Expanding my mastery of **React** while exploring backend architectures and frameworks to transition into robust full-stack applications.
+### `npm test`
 
----
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## 🤝 Let's Collaborate!
+### `npm run build`
 
-I am actively looking to collaborate on:
-- 🚀 **StartUp projects** from the ground up
-- 📦 **New product development** 
-- 💡 **Innovative side projects** where I can contribute both my technical coding skills and creative design/selector perspective.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## 📬 Connect With Me
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-* **Website & Portfolio:** [juanfalibene.com](http://juanfalibene.com)
-* **GitHub Profile:** [@juanfalibene](https://github.com/juanfalibene)
+### `npm run eject`
 
----
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-<p align="center">
-  <i>"For the love of sharing music & code."</i>
-</p>
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
