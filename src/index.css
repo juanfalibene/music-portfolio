@@ -116,6 +116,7 @@ a {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -217,14 +218,31 @@ section.video {
 }
 
 .home-hero h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
   font-size: 2.5em;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: -2px;
   color: #1b1b1b;
   text-align: center;
   max-width: 15ch;
+}
+
+.hero-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #1b1b1b;
+  margin-bottom: 0.5rem;
+}
+
+.hero-main-title {
+  letter-spacing: -2px;
 }
 
 .next-events-container {
@@ -235,9 +253,11 @@ section.video {
 
 .past-gigs-link-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: 1.5em;
-  padding: 0 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 1px solid #1b1b1b20;
 }
 
 .past-gigs-link {
@@ -246,13 +266,11 @@ section.video {
   text-transform: uppercase;
   letter-spacing: -1px;
   color: #1b1b1b;
-  border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
 }
 
 .past-gigs-link:hover {
   opacity: 0.7;
-  border-bottom: 1px solid #1b1b1b;
 }
 
 .home-main {
@@ -290,9 +308,11 @@ section.video {
 }
 
 .show-card-image {
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  border-top-left-radius: inherit;
 }
 
 .show-card-image img {
@@ -305,6 +325,58 @@ section.video {
 
 .show-card:hover .show-card-image img {
   transform: scale(1.03);
+}
+
+/* PLAY BUTTON */
+
+/* Contenedor del botón de reproducción para posicionamiento absoluto */
+.play-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px;
+  /* Espaciado desde la esquina */
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 10;
+  /* Asegura que esté por encima de la imagen */
+}
+
+/* Estilo del botón circular clásico, visible por defecto */
+.play-button {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  /* Ligeramente transparente por defecto */
+  transform: scale(0.9);
+  /* Un poco más pequeño por defecto */
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out,
+    background-color 0.2s ease;
+}
+
+/* Ajuste fino del icono SVG para centrado óptimo */
+.play-button svg {
+  margin-left: 3px;
+  /* Compensación visual para el triángulo de play */
+}
+
+/* Animación al hacer hover sobre la tarjeta */
+.show-card:hover .play-button,
+.show-card:focus-within .play-button {
+  opacity: 1;
+  /* Totalmente opaco al hacer hover */
+  transform: scale(1.1);
+  /* Crece ligeramente al hacer hover */
+  background-color: #f0f0f0;
+  /* Cambia ligeramente el fondo al hacer hover */
 }
 
 .show-card-info {
@@ -709,29 +781,35 @@ h2.page-title {
   margin-top: 0.75em;
 }
 
-.about-social ul li {
+.about-social ul li,
+.about-links a {
   width: fit-content;
-  padding: 0.35em 0.75em;
-  background-color: transparent;
-  border-radius: 1em;
-  margin-right: 0.5em;
-  cursor: pointer;
-  transition: all 0.3s;
   display: block;
-  font-size: 0.835em;
-  border: 1px solid #1b1b1b25;
 }
 
-.about-social ul li a {
+.about-social ul li a,
+.about-links a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 0.835em;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  color: #1b1b1b;
+  background-color: transparent;
+  border: 1px #1b1b1b25 solid;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.about-social ul li a:hover,
+.about-links a:hover {
   text-decoration: none;
   color: #1b1b1b;
-}
-
-.about-social ul li:hover {
-  border-radius: 1em;
-  transform: scale(1.01);
-  background-color: #cd97e960;
-  border-color: #cd97e960;
+  border: 1px #1b1b1b50 solid;
+  transform: scale(1.02);
 }
 
 /* ─── RECOMMENDATIONS / PICKS ──────────────────────────────── */
@@ -811,6 +889,7 @@ h2.page-title {
 
 .reco-item:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .reco-item-id {
@@ -846,7 +925,7 @@ footer {
   border-top: 1px solid #1b1b1b10;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 footer a {
@@ -854,6 +933,40 @@ footer a {
   border-radius: 0.25em;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+a.footer-link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 0.835em;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  color: #1b1b1b;
+  background-color: transparent;
+  border: 1px #1b1b1b25 solid;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+a.footer-link:hover {
+  text-decoration: none;
+  color: #1b1b1b;
+  border: 1px #1b1b1b50 solid;
+  transform: scale(1.02);
 }
 
 .footer-brand {
@@ -931,7 +1044,8 @@ footer img.img-profile:hover {
   .home-main,
   section {
     padding: 1em;
-    margin-top: 3.5rem; /* Compensate for fixed header */
+    margin-top: 3.5rem;
+    /* Compensate for fixed header */
   }
 
   .header .logo {
@@ -1024,15 +1138,18 @@ footer img.img-profile:hover {
   .reco-image-wrapper {
     grid-area: overlay;
     position: sticky;
-    bottom: 2em; /* Some space from the very bottom or just 0 */
+    bottom: 2em;
+    /* Some space from the very bottom or just 0 */
     left: 2em;
     width: 30vw;
     max-width: 150px;
     height: auto;
     aspect-ratio: 1 / 1;
-    z-index: 1; /* Small secondary layer behind the list */
+    z-index: 1;
+    /* Small secondary layer behind the list */
     pointer-events: none;
-    align-self: flex-end; /* Align itself in the grid area if possible */
+    align-self: flex-end;
+    /* Align itself in the grid area if possible */
   }
 
   .reco-image-wrapper img {
@@ -1047,7 +1164,8 @@ footer img.img-profile:hover {
   .reco-list-wrapper {
     grid-area: overlay;
     position: relative;
-    z-index: 2; /* Passing over the image */
+    z-index: 2;
+    /* Passing over the image */
     padding: 2em 0 10vh 0;
   }
 
@@ -1074,6 +1192,7 @@ footer img.img-profile:hover {
   .reco-item-name {
     font-size: 1em;
     color: #1b1b1b;
+    padding-right: 0.25rem;
   }
 
   .reco-item-arrow {
@@ -1198,4 +1317,93 @@ footer img.img-profile:hover {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+/* Presskit & About Links Styles */
+.about-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.presskit-bio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.bio-title {
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #1b1b1b;
+  border-bottom: 1px solid #1b1b1b20;
+  padding-bottom: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.short-bio {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #1b1b1b90;
+}
+
+.short-bio p {
+  margin-bottom: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .presskit-bio {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.copy-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  color: #1b1b1b;
+  border: 1px #1b1b1b25 solid;
+  border-radius: 1em;
+  padding: 0.25em 0.75em;
+  font-size: 0.835em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+  margin-top: 1rem;
+}
+
+.copy-btn:hover {
+  border-color: #1b1b1b50;
+  transform: scale(1.02);
+}
+
+.presskit-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.presskit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presskit-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }

@@ -9,7 +9,10 @@ export const Home = () => {
   return (
     <main className='home-main'>
       <div className='home-hero'>
-        <h1>FOR THE LOVE OF SHARING MUSIC</h1>
+        <h1>
+          <span className='hero-subtitle'>DJ & SELECTOR</span>
+          <span className='hero-main-title'>FOR THE LOVE OF SHARING MUSIC</span>
+        </h1>
       </div>
       <NextEventsList />
       <AllShowsGrid shows={allShows} />

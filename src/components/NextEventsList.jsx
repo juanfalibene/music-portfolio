@@ -23,7 +23,7 @@ export const NextEventsList = () => {
       </ul>
       <div className='past-gigs-link-wrapper'>
         <Link to="/past-gigs" className='past-gigs-link'>
-          Past Gigs since 2016 &#8594;
+          Past Gigs &#8594;
         </Link>
       </div>
     </div>

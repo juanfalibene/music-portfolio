@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const About = () => {
   return (
@@ -33,9 +34,10 @@ export const About = () => {
               I've had the pleasure of showcasing my sessions at various venues,
               most notably at the Café Berlin Music Club in Madrid from 2016 to
               2019. During that period, I had the opportunity to share the stage
-              with renowned international artists such as Folamour, Hugo LX, and
-              Nickodemus. Additionally, I've collaborated with radio stations in
-              Madrid, Barcelona, Glasgow, and London.
+              with renowned international artists such as Folamour, Hugo LX,
+              Nickodemus, Pabels and Manu Desrets. Additionally, I've
+              collaborated with radio stations in Madrid, Barcelona, Glasgow,
+              and London.
             </p>
 
             <p>
@@ -54,6 +56,11 @@ export const About = () => {
               For upcoming sessions and new music discoveries, feel free to
               connect with me.
             </p>
+
+            <div className='about-links'>
+              <a href='mailto:juanignaciofalibene@gmail.com'>BOOKINGS</a>
+              <Link to='/presskit'>PRESSKIT</Link>
+            </div>
           </div>
 
           <div className='about-image'>
@@ -88,6 +95,15 @@ export const About = () => {
             </li>
             <li>
               <a
+                href='https://ra.co/dj/juanfalibene'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Resident Advisor
+              </a>
+            </li>
+            <li>
+              <a
                 href='https://soundcloud.com/juanfalibene'
                 target='_blank'
                 rel='noreferrer'
@@ -111,15 +127,6 @@ export const About = () => {
                 rel='noreferrer'
               >
                 Spotify
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://juanfalibene.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Website
               </a>
             </li>
             <li>

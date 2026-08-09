@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { PlayerContext } from '../context/PlayerContext';
 
 export const AllShowsGrid = ({ shows }) => {
@@ -14,10 +13,32 @@ export const AllShowsGrid = ({ shows }) => {
           key={show.id + show.title}
           role="button"
           tabIndex={0}
+          onKeyDown={(e) => e.key === 'Enter' && setActiveShow(show)}
         >
-          <div className='show-card-image'>
+          {/* Contenedor de la imagen */}
+          <div className='show-card-image relative'> {/* He añadido 'relative' aquí */}
             <img src={show.cover} alt={show.title} loading="lazy" />
+
+            {/* Botón de reproducción siempre visible en la esquina superior izquierda */}
+            <button
+              className='play-button-overlay' /* Nueva clase para el posicionamiento */
+              aria-label={`Reproducir ${show.title}`}
+              tabIndex={-1}
+            >
+              <div className='play-button'> {/* Clase para el estilo del botón */}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="28"
+                  height="28"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
           </div>
+
+          {/* Información del show */}
           <div className='show-card-info'>
             <span className={`show-category-badge ${show.category}`}>
               {show.category}

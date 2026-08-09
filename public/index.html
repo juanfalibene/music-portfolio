@@ -3,24 +3,75 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>📀</text></svg>">
-  </link>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="For the love of sharing music. Radio, mixes, and playlists to discover new music." />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <title>Music Juan Falibene</title>
+  
+  <!-- Primary Meta Tags -->
+  <title>Juan Falibene | Music Selector & DJ</title>
+  <meta name="title" content="Juan Falibene | Music Selector & DJ" />
+  <meta name="description" content="Juan Falibene is a Barcelona-based music selector and DJ. Discover radio shows, mixes, and curated playlists spanning Soul, Funk, Disco, House, and Jazz." />
+  <link rel="canonical" href="https://music.juanfalibene.com" />
+  <meta name="theme-color" content="#000000" />
 
-  <!-- Open Graph / Social Media Tags -->
-  <meta property="og:title" content="Juan Falibene | Music Portfolio" />
-  <meta property="og:description" content="For the love of sharing music. Radio, mixes, and playlists and discover new music." />
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://music.juanfalibene.com/img/r005.jpeg" />
+  <meta property="og:url" content="https://music.juanfalibene.com" />
+  <meta property="og:title" content="Juan Falibene | Music Selector & DJ" />
+  <meta property="og:description" content="Juan Falibene is a Barcelona-based music selector and DJ. Discover radio shows, mixes, and curated playlists spanning Soul, Funk, Disco, House, and Jazz." />
+  <meta property="og:image" content="https://music.juanfalibene.com/img/og_image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Juan Falibene DJ Session" />
+  <meta property="og:site_name" content="Juan Falibene" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://music.juanfalibene.com" />
+  <meta name="twitter:title" content="Juan Falibene | Music Selector & DJ" />
+  <meta name="twitter:description" content="Juan Falibene is a Barcelona-based music selector and DJ. Discover radio shows, mixes, and curated playlists spanning Soul, Funk, Disco, House, and Jazz." />
+  <meta name="twitter:image" content="https://music.juanfalibene.com/img/og_image.jpg" />
+  <meta name="twitter:site" content="@juanfalibene" />
+
+  <!-- Favicons & App Manifest -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>📀</text></svg>" />
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Juan Falibene | Music Selector & DJ",
+    "description": "Juan Falibene is a Barcelona-based music selector and DJ. Discover radio shows, mixes, and curated playlists spanning Soul, Funk, Disco, House, and Jazz.",
+    "url": "https://music.juanfalibene.com",
+    "image": "https://music.juanfalibene.com/img/og_image.jpg",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Juan Falibene",
+      "description": "Disc Jockey and music selector with a deep passion for listening, selecting, mixing, and sharing music.",
+      "sameAs": [
+        "https://www.instagram.com/juanfalibene/",
+        "https://soundcloud.com/juanfalibene",
+        "https://www.mixcloud.com/juanfalibene/",
+        "https://ra.co/dj/juanfalibene",
+        "https://linktr.ee/juanfalibene"
+      ]
+    }
+  }
+  </script>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Static fallback for non-JS/SEO web crawlers (React will replace this dynamically upon mount) -->
+    <header style="display: none;">
+      <h1>Juan Falibene | Music Selector & DJ</h1>
+      <p>Juan Falibene is a Barcelona-based music selector and DJ. Discover radio shows, mixes, and curated playlists spanning Soul, Funk, Disco, House, and Jazz.</p>
+    </header>
+  </div>
 </body>
 
 </html>
