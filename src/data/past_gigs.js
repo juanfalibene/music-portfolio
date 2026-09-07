@@ -1,6 +1,34 @@
 // Data for Past Gigs since 2016
 export const pastGigs = [
   {
+    id: "som-sept26",
+    date: "06.09.26",
+    name: "VINYL SELECTION @ SOM",
+    image: "img/past_gigs/2026-06-09-som.jpg",
+    raw_date: "2026-06-09",
+  },
+  {
+    id: "imperdible-aug26",
+    date: "22.08.26",
+    name: "VINYL SELECTION @ IMPERDIBLE",
+    image: "img/past_gigs/2026-22-08-imperdible.jpg",
+    raw_date: "2026-22-08",
+  },
+  {
+    id: "culkin-aug26",
+    date: "16.08.26",
+    name: "Vinyl Selection @ Culkin",
+    image: "img/past_gigs/2026-16-08-culkin.jpg",
+    raw_date: "2026-08-16",
+  },
+  {
+    id: "salvadiscos-aug26",
+    date: "14.08.26",
+    name: "Salvadiscos w/ friends",
+    image: "img/past_gigs/2026-14-08-salvadiscos.jpg",
+    raw_date: "2026-08-14",
+  },
+  {
     id: "jac-apr26",
     date: "02.08.26",
     name: "JA\u00c7 CAF\u00c8",
