@@ -280,6 +280,78 @@ section.video {
   padding: 2em;
 }
 
+/* ─── CATEGORY FILTER BAR ────────────────────────────────────── */
+
+.shows-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-filter-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: inline-block;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 0.835em;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  color: #1b1b1b;
+  border: 1px #1b1b1b25 solid;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  text-decoration: none;
+  color: #1b1b1b;
+  border: 1px #1b1b1b50 solid;
+  background-color: #1b1b1b10;
+  transform: scale(1.02);
+}
+
+.filter-btn.active {
+  background-color: #1b1b1b20;
+  color: #1b1b1b;
+  border: 1px #1b1b1b50 solid;
+}
+
+.filter-btn.filter-organica:hover {
+  background-color: #279e0025;
+  border-color: #279e0040;
+}
+
+.filter-btn.filter-organica.active {
+  background-color: #279e0060;
+  color: #1b1b1b;
+  border-color: #279e0050;
+}
+
+.filter-btn.filter-electronica:hover {
+  background-color: #00b4d825;
+  border-color: #00b4d840;
+}
+
+.filter-btn.filter-electronica.active {
+  background-color: #00b4d850;
+  color: #1b1b1b;
+  border-color: #00b4d850;
+}
+
 /* ─── SHOWS GRID (3 columns) ────────────────────────────────── */
 
 .shows-grid {
@@ -1023,6 +1095,17 @@ footer img.img-profile:hover {
 
 /* Mobile: 1 column */
 @media (max-width: 640px) {
+  .category-filter-bar {
+    justify-content: flex-start;
+    gap: 0.4em;
+    margin-bottom: 1em;
+  }
+
+  .filter-btn {
+    font-size: 0.78em;
+    padding: 0.3em 0.7em;
+  }
+
   .shows-grid {
     grid-template-columns: 1fr;
     gap: 1em;
