@@ -11,6 +11,7 @@ export const radio = [
       "https://i1.sndcdn.com/artworks-aRoxr92VCgOb4Un8-cypOng-t1080x1080.jpg",
     genres: ["Soul", "Funk", "Rare Groove"],
     category: "radio",
+    parentCategory: ["organica"],
   },
   {
     id: "r008",
@@ -23,6 +24,7 @@ export const radio = [
     cover: "./img/r008.jpg",
     genres: ["Jazz", "Soul-Jazz", "Free-Jazz", "Live Recording"],
     category: "radio",
+    parentCategory: ["organica"],
   },
   {
     id: "r007",
@@ -35,6 +37,7 @@ export const radio = [
     cover: "./img/r007.jpg",
     genres: ["Jazz", "Soul", "Disco"],
     category: "radio",
+    parentCategory: ["organica"],
   },
   {
     id: "r001",
@@ -47,6 +50,7 @@ export const radio = [
     cover: "./img/r001.jpeg",
     genres: ["Soul", "Funk", "Disco"],
     category: "radio",
+    parentCategory: ["organica"],
   },
   {
     id: "r005",
@@ -59,6 +63,7 @@ export const radio = [
     cover: "./img/r005.jpeg",
     genres: ["Soul", "Funk", "Jazz-Rock"],
     category: "radio",
+    parentCategory: ["organica"],
   },
   {
     id: "r003",
@@ -71,6 +76,7 @@ export const radio = [
     cover: "./img/r004.jpeg",
     genres: ["Soul", "Funk", "Jazz"],
     category: "radio",
+    parentCategory: ["organica"],
   },
   {
     id: "r006",
@@ -83,6 +89,7 @@ export const radio = [
     cover: "./img/r006.jpeg",
     genres: ["Soul", "Funk", "Classic Disco", "70´s"],
     category: "radio",
+    parentCategory: ["organica"],
   },
   {
     id: "r005",
@@ -95,6 +102,7 @@ export const radio = [
     cover: "./img/r003.jpeg",
     genres: ["Soul", "Funk", "Jazz"],
     category: "radio",
+    parentCategory: ["organica"],
   },
   {
     id: "r003",
@@ -107,6 +115,7 @@ export const radio = [
     cover: "./img/r002.jpeg",
     genres: ["Soul", "Funk", "Free-Jazz"],
     category: "radio",
+    parentCategory: ["organica"],
   },
 ];
 
@@ -122,6 +131,7 @@ export const mixes = [
     cover: "./img/m001.jpeg",
     genres: ["Disco-House", "Disco-Funk", "Disco"],
     category: "mixes",
+    parentCategory: ["organica", "electronica"],
   },
   {
     id: "m009",
@@ -133,6 +143,7 @@ export const mixes = [
     cover: "./img/m004.jpeg",
     genres: ["House", "Funk", "Disco", "Live Recording"],
     category: "mixes",
+    parentCategory: ["electronica"],
   },
   {
     id: "m008",
@@ -146,6 +157,7 @@ export const mixes = [
       "https://thumbnailer.mixcloud.com/unsafe/580x580/extaudio/8/3/0/1/da2c-39db-4056-a493-ff95f6087683",
     genres: ["Soul", "Funk", "Jazz-Funk"],
     category: "mixes",
+    parentCategory: ["organica"],
   },
   {
     id: "m007",
@@ -159,9 +171,24 @@ export const mixes = [
       "https://thumbnailer.mixcloud.com/unsafe/580x580/extaudio/0/3/7/c/8eac-03e5-4558-b74c-20641ec72535",
     genres: ["Soul", "Funk", "Jazz-Funk"],
     category: "mixes",
+    parentCategory: ["organica"],
   },
   {
     id: "m006",
+    title: "Sounds, Healing, Mixtape III",
+    place: "Madrid",
+    date: "30.03.20",
+    embed:
+      "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fjuanfalibene%2Fsounds-healing-mixtape-3%2F",
+    url: "https://www.mixcloud.com/juanfalibene/sounds-healing-mixtape-3/",
+    cover:
+      "https://thumbnailer.mixcloud.com/unsafe/580x580/extaudio/b/0/7/6/d9d5-2a0a-4df3-8862-54bfcd67c75c",
+    genres: ["Soul", "Funk", "Jazz", "Hip-Hop", "Disco"],
+    category: "mixes",
+    parentCategory: ["organica"],
+  },
+  {
+    id: "m005",
     title: "Haüz III",
     place: "Madrid",
     date: "01.08.19",
@@ -171,9 +198,10 @@ export const mixes = [
     cover: "https://i1.sndcdn.com/artworks-000445632243-v52o8h-t1080x1080.jpg",
     genres: ["Deep House", "House", "Electronic"],
     category: "mixes",
+    parentCategory: ["electronica"],
   },
   {
-    id: "m005",
+    id: "m004",
     title: "Haüz II",
     place: "Madrid",
     date: "02.04.19",
@@ -183,9 +211,10 @@ export const mixes = [
     cover: "https://i1.sndcdn.com/artworks-000445632354-ifhr5s-t1080x1080.jpg",
     genres: ["Deep House", "House", "Nu Disco"],
     category: "mixes",
+    parentCategory: ["electronica"],
   },
   {
-    id: "m004",
+    id: "m003",
     title: "Haüz I",
     place: "Madrid",
     date: "16.11.18",
@@ -195,9 +224,10 @@ export const mixes = [
     cover: "https://i1.sndcdn.com/artworks-000445633590-8imvc7-t1080x1080.jpg",
     genres: ["Deep House", "House"],
     category: "mixes",
+    parentCategory: ["electronica"],
   },
   {
-    id: "m003",
+    id: "m002",
     title: "TCCBR from Café Pavón",
     place: "Madrid",
     date: "02.11.18",
@@ -206,9 +236,10 @@ export const mixes = [
     cover: "./img/m005.jpeg",
     genres: ["Soul", "Funk", "Jazz-Funk", "Live Recording"],
     category: "mixes",
+    parentCategory: ["organica"],
   },
   {
-    id: "m002",
+    id: "m001",
     title: "La Radio live #090 Juan Falibene",
     place: "Barcelona",
     date: "04.10.17",
@@ -217,9 +248,10 @@ export const mixes = [
     cover: "./img/m003.jpeg",
     genres: ["Soul", "Funk", "Disco", "Live Recording"],
     category: "mixes",
+    parentCategory: ["organica"],
   },
   {
-    id: "m001",
+    id: "m000",
     title: "Tuesnight Selection @ Café Berlín",
     place: "Madrid",
     date: "10.11.16",
@@ -229,6 +261,7 @@ export const mixes = [
     cover: "./img/m002.jpeg",
     genres: ["Nudisco", "Indie-Dance", "House", "Live Recording"],
     category: "mixes",
+    parentCategory: ["electronica"],
   },
 ];
 
@@ -244,6 +277,7 @@ export const playlists = [
     cover: "./img/p001.jpg",
     genres: ["Jazz", "Soul", "Modern-Soul"],
     category: "playlists",
+    parentCategory: ["organica"],
   },
   {
     id: "p003",
@@ -256,6 +290,7 @@ export const playlists = [
     cover: "./img/p003.jpg",
     genres: ["Neo-Soul", "Soul", "Hip-Hop"],
     category: "playlists",
+    parentCategory: ["organica"],
   },
   {
     id: "p002",
@@ -268,6 +303,7 @@ export const playlists = [
     cover: "./img/p002.jpg",
     genres: ["Jazz", "Brasil", "Bossa"],
     category: "playlists",
+    parentCategory: ["organica"],
   },
   {
     id: "p004",
@@ -280,6 +316,7 @@ export const playlists = [
     cover: "./img/p004.jpg",
     genres: ["Disco", "Dance", "Boogie"],
     category: "playlists",
+    parentCategory: ["organica", "electronica"],
   },
 ];
 
@@ -584,21 +621,6 @@ export const recommendations = {
 export const next = {
   Venues: [
     {
-      date: "14-08-2026",
-      venue: "BLACKIE & FRIENDS @ SALVADISCOS",
-      link: "https://www.instagram.com/salvadiscos/",
-    },
-    {
-      date: "16-08-2026",
-      venue: "Vinyl Selection @ Culkin",
-      link: "https://www.instagram.com/culkinbcn",
-    },
-    {
-      date: "22-08-2026",
-      venue: "Vinyl Selection @ Imperdible",
-      link: "https://www.instagram.com/imperdible.bcn/",
-    },
-    {
       date: "10-09-2026",
       venue: "B-UNITED @ SALVADISCOS",
       link: "https://www.instagram.com/salvadiscos/",
@@ -607,6 +629,11 @@ export const next = {
       date: "20-09-2026",
       venue: "Vinyl Selection @ CURTIS",
       link: "https://www.instagram.com/curtisaudiocafe/",
+    },
+    {
+      date: "21-09-2026",
+      venue: "Vinyl Selection @ AMATEUR",
+      link: "https://www.instagram.com/amateur.bar/",
     },
   ],
 };
