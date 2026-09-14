@@ -121,6 +121,48 @@ export const radio = [
 
 export const mixes = [
   {
+    id: "m013",
+    title: "10Y / HOUSE",
+    place: "Barcelona",
+    date: "20.09.26",
+    embed:
+      "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&autoplay=1&feed=%2Fjuanfalibene%2F10y-house%2F",
+    url: "https://www.mixcloud.com/juanfalibene/10y-house/",
+    cover:
+      "https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/8/3/9/6/7295-12a0-4aa9-bf5b-3d72690695e5",
+    genres: ["House", "Balearic", "Jazz House", "Deep Tech"],
+    category: "mixes",
+    parentCategory: ["electronica"],
+  },
+  {
+    id: "m012",
+    title: "10Y / DEEPHOUSE",
+    place: "Barcelona",
+    date: "20.09.26",
+    embed:
+      "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&autoplay=1&feed=%2Fjuanfalibene%2F10y-deephouse%2F",
+    url: "https://www.mixcloud.com/juanfalibene/10y-deephouse/",
+    cover:
+      "https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/8/7/9/d/fa5a-691c-4098-8950-6b9d5709a3e0",
+    genres: ["Deep House", "Jazz House", "House", "Vocal House"],
+    category: "mixes",
+    parentCategory: ["electronica"],
+  },
+  {
+    id: "m011",
+    title: "10Y / NU-DISCO",
+    place: "Barcelona",
+    date: "20.09.26",
+    embed:
+      "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&autoplay=1&feed=%2Fjuanfalibene%2F10y-nu-disco%2F",
+    url: "https://www.mixcloud.com/juanfalibene/10y-nu-disco/",
+    cover:
+      "https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/3/d/e/6/0b88-85e6-4509-bb99-7a25a3411879",
+    genres: ["Nu-Disco", "Disco", "Disco House", "Indie Dance"],
+    category: "mixes",
+    parentCategory: ["electronica"],
+  },
+  {
     id: "m0010",
     title: "Disco Between Cafe",
     place: "Madrid",
@@ -143,7 +185,7 @@ export const mixes = [
     cover: "./img/m004.jpeg",
     genres: ["House", "Funk", "Disco", "Live Recording"],
     category: "mixes",
-    parentCategory: ["electronica"],
+    parentCategory: ["electronica", "video"],
   },
   {
     id: "m008",
@@ -209,7 +251,7 @@ export const mixes = [
       "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A338785596&color=%23384336&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false",
     url: "https://soundcloud.com/imhauz/hauz2",
     cover: "https://i1.sndcdn.com/artworks-000445632354-ifhr5s-t1080x1080.jpg",
-    genres: ["Deep House", "House", "Nu Disco"],
+    genres: ["Deep House", "House", "Nu-Disco"],
     category: "mixes",
     parentCategory: ["electronica"],
   },
@@ -236,7 +278,7 @@ export const mixes = [
     cover: "./img/m005.jpeg",
     genres: ["Soul", "Funk", "Jazz-Funk", "Live Recording"],
     category: "mixes",
-    parentCategory: ["organica"],
+    parentCategory: ["organica", "video"],
   },
   {
     id: "m001",
@@ -248,7 +290,7 @@ export const mixes = [
     cover: "./img/m003.jpeg",
     genres: ["Soul", "Funk", "Disco", "Live Recording"],
     category: "mixes",
-    parentCategory: ["organica"],
+    parentCategory: ["organica", "video"],
   },
   {
     id: "m000",
@@ -259,7 +301,7 @@ export const mixes = [
       "https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&autoplay=1&feed=%2Fjuanfalibene%2Ftuesnight-selection-caf%C3%A9-berl%C3%ADn-10-11%2F",
     url: "https://www.mixcloud.com/juanfalibene/tuesnight-selection-caf%C3%A9-berl%C3%ADn-10-11/",
     cover: "./img/m002.jpeg",
-    genres: ["Nudisco", "Indie-Dance", "House", "Live Recording"],
+    genres: ["Nu-Disco", "Indie-Dance", "House", "Live Recording"],
     category: "mixes",
     parentCategory: ["electronica"],
   },
@@ -621,11 +663,6 @@ export const recommendations = {
 export const next = {
   Venues: [
     {
-      date: "10-09-2026",
-      venue: "B-UNITED @ SALVADISCOS",
-      link: "https://www.instagram.com/salvadiscos/",
-    },
-    {
       date: "20-09-2026",
       venue: "Vinyl Selection @ CURTIS",
       link: "https://www.instagram.com/curtisaudiocafe/",
@@ -634,6 +671,11 @@ export const next = {
       date: "21-09-2026",
       venue: "Vinyl Selection @ AMATEUR",
       link: "https://www.instagram.com/amateur.bar/",
+    },
+    {
+      date: "03-10-2026",
+      venue: "Vinyl Selection @ TWO SCHMUCKS",
+      link: "https://www.instagram.com/two.schmucks/",
     },
   ],
 };

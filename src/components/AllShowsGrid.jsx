@@ -38,6 +38,13 @@ export const AllShowsGrid = ({ shows }) => {
         >
           Electronic
         </button>
+        <button
+          type="button"
+          className={`filter-btn filter-video ${selectedCategory === 'video' ? 'active' : ''}`}
+          onClick={() => setSelectedCategory('video')}
+        >
+          Video
+        </button>
       </div>
 
       <div className='shows-grid'>

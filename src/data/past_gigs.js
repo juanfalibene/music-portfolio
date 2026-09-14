@@ -1,10 +1,17 @@
 // Data for Past Gigs since 2016
 export const pastGigs = [
   {
+    id: "salvadiscos-sept26",
+    date: "10.09.26",
+    name: "B-UNITED W/ BLACKIE @ SALVADISCOS",
+    image: "img/past_gigs/2026-09-10-b-united-salvadiscos.jpg",
+    raw_date: "2026-10-09",
+  },
+  {
     id: "som-sept26",
     date: "06.09.26",
     name: "VINYL SELECTION @ SOM",
-    image: "img/past_gigs/2026-06-09-som.jpg",
+    image: "img/past_gigs/2026-09-06-som.jpg",
     raw_date: "2026-06-09",
   },
   {

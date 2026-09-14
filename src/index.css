@@ -352,6 +352,17 @@ section.video {
   border-color: #00b4d850;
 }
 
+.filter-btn.filter-video:hover {
+  background-color: #ff475725;
+  border-color: #ff475740;
+}
+
+.filter-btn.filter-video.active {
+  background-color: #ff475750;
+  color: #1b1b1b;
+  border-color: #ff475750;
+}
+
 /* ─── SHOWS GRID (3 columns) ────────────────────────────────── */
 
 .shows-grid {
