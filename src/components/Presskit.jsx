@@ -27,6 +27,10 @@ export const Presskit = () => {
     },
     { name: "r005.jpeg", path: "/img/r005.jpeg" },
     {
+      name: "juanfalibene_dj_05.jpg",
+      path: "/presskit/pics/juanfalibene_dj_05.jpg",
+    },
+    {
       name: "juanfalibene-presskit-3825.jpg",
       path: "/presskit/pics/juanfalibene-presskit-3825.jpg",
     },
@@ -74,6 +78,14 @@ export const Presskit = () => {
       <div className='page'>
         <div className='home-hero'>
           <h1>PRESSKIT</h1>
+          <div className='presskit-hero-actions' style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', width: '100%' }}>
+            <a href='/PRESSKIT.pdf' download='Juan_Falibene_Presskit.pdf' className='copy-btn' style={{ display: 'inline-block', textDecoration: 'none' }}>
+              DOWNLOAD PDF
+            </a>
+            <a href='/presskit.html' target='_blank' rel='noreferrer' className='copy-btn' style={{ display: 'inline-block', textDecoration: 'none' }}>
+              VIEW EPK
+            </a>
+          </div>
         </div>
         <div className='presskit-bio'>
           <div className='bio-column'>
@@ -130,11 +142,51 @@ export const Presskit = () => {
                 alt={`Presskit ${index + 1}`}
                 loading='lazy'
               />
-              <a href={img.path} download={img.name} className='copy-btn'>
-                DOWNLOAD
-              </a>
+              <div className='presskit-item-overlay'>
+                <a href={img.path} download={img.name} className='copy-btn'>
+                  DOWNLOAD
+                </a>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Technical Rider Section */}
+        <div className='presskit-section presskit-rider'>
+          <h3 className='bio-title'>TECHNICAL RIDER & SETUP</h3>
+          <div className='rider-card full-width'>
+            <p className='rider-formats'>
+              <strong>Format Options:</strong> Vinyl Only • Hybrid (Vinyl + Digital) • Digital (Pioneer CDJ / XDJ)
+            </p>
+            <ul>
+              <li><strong>Turntables:</strong> 2x Technics SL-1200 / 1210 (with high quality cartridges & needles)</li>
+              <li><strong>Mixer:</strong> 1x High-Quality Mixer (Rotary or Club Mixer: MasterSounds, E&S, Allen & Heath Xone 92/96, or Pioneer DJM-900NXS2)</li>
+              <li><strong>Media Players:</strong> 2x Pioneer CDJ-2000NXS2 / 3000</li>
+              <li><strong>Monitors:</strong> High quality booth monitors with independent volume control</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Booking CTA Section */}
+        <div className='presskit-section presskit-booking'>
+          <h3>BOOKING & INQUIRIES</h3>
+          <p>Feel free to reach out for bookings, collaborations, or a chat!</p>
+          <div className='booking-cta-buttons'>
+            <a
+              href='mailto:juanignaciofalibene@gmail.com'
+              className='copy-btn booking-btn dark'
+            >
+              EMAIL BOOKING
+            </a>
+            <a
+              href="https://wa.me/34651552278?text=Hi%20Juan,%20I'm%20interested%20in%20booking%20a%20session!"
+              target='_blank'
+              rel='noreferrer'
+              className='copy-btn booking-btn wa-btn'
+            >
+              WHATSAPP BOOKING
+            </a>
+          </div>
         </div>
       </div>
     </section>

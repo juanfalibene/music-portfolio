@@ -348,6 +348,33 @@ export const playlists = [
     parentCategory: ["organica"],
   },
   {
+    id: "p006",
+    title: "Vinyl Mixed Bag 📀",
+    place: "Barcelona",
+    date: "21.09.26",
+    embed:
+      "https://open.spotify.com/embed/playlist/4sV6ECCn3NRFluFJvbWYNf?utm_source=generator",
+    url: "https://open.spotify.com/playlist/4sV6ECCn3NRFluFJvbWYNf?si=d9b89a6c15c048f7",
+    cover: "./img/p006.jpg",
+    genres: ["Soul", "Funk", "Disco", "Jazz", "Rare Groove"],
+    category: "playlists",
+    parentCategory: ["organica"],
+  },
+  {
+    id: "p005",
+    title: "Espacio SODA",
+    place: "El Chaltén, Patagonia",
+    date: "17.09.26",
+    embed:
+      "https://open.spotify.com/embed/playlist/4jKS3skwBZWHNHKZfDkZZS?utm_source=generator",
+    url: "https://open.spotify.com/playlist/4jKS3skwBZWHNHKZfDkZZS?si=47651cdceecd41db",
+    cover:
+      "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84608ae788e00419c5acaa6968",
+    genres: ["Soul", "Funk", "Rock", "Fusion", "Brasil", "Hip-Hop", "Jazz"],
+    category: "playlists",
+    parentCategory: ["organica"],
+  },
+  {
     id: "p004",
     title: "Pajaritos Mojados",
     place: "Madrid",
@@ -655,6 +682,11 @@ export const recommendations = {
     },
     {
       id: "G-006",
+      name: "VYNIL SESSION @ CURTIS AUDIOPHILE BAR",
+      image: "img/past_gigs/2026-20-09-curtis.jpg",
+    },
+    {
+      id: "G-007",
       name: "BEATS & RHYMES & LIFE @ CURTIS",
       image: "img/gigs/gigs002.jpg",
     },
@@ -662,11 +694,6 @@ export const recommendations = {
 };
 export const next = {
   Venues: [
-    {
-      date: "20-09-2026",
-      venue: "Vinyl Selection @ CURTIS",
-      link: "https://www.instagram.com/curtisaudiocafe/",
-    },
     {
       date: "21-09-2026",
       venue: "Vinyl Selection @ AMATEUR",
@@ -676,6 +703,11 @@ export const next = {
       date: "03-10-2026",
       venue: "Vinyl Selection @ TWO SCHMUCKS",
       link: "https://www.instagram.com/two.schmucks/",
+    },
+    {
+      date: "09-10-2026",
+      venue: "Vinyl Selection @ KLUB KISSA BCN",
+      link: "https://www.instagram.com/klubkissabcn/",
     },
   ],
 };

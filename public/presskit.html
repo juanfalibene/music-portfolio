@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Falibene — Electronic Press Kit (EPK)</title>
+  <meta name="description"
+    content="Official Electronic Press Kit for Juan Falibene — Disc Jockey & Music Selector based in Barcelona.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* Exact CSS variables and styles matching music.juanfalibene.com site design system */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    ::-webkit-scrollbar {
+      appearance: none;
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 16px;
+      background-color: #cd97e9;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #1b1b1b;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background: linear-gradient(250deg,
+          rgba(255, 255, 255, 0.85),
+          rgba(250, 250, 250, 0.65),
+          rgba(245, 245, 245, 0.5));
+      background-size: 180% 180%;
+      animation: gradient-animation 18s ease infinite;
+      line-height: 1.45;
+      padding: 1em 1.25em;
+      min-height: 100vh;
+    }
+
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    a {
+      color: #1b1b1b;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 0.5em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    /* ─── HEADER BAR ─── */
+    .header-bar {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0.55em 1.2em;
+      background-color: rgba(255, 252, 245, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid #1b1b1b15;
+      border-radius: 2em;
+      transition: all 0.3s ease;
+    }
+
+    .header-main {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+    }
+
+    .logo-disc {
+      display: flex;
+      align-items: center;
+      font-size: 1em;
+      line-height: 1;
+      animation: disc-rotate 8s linear infinite;
+    }
+
+    @keyframes disc-rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .logo-text {
+      font-size: 0.825em;
+      font-weight: 600;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      line-height: 1;
+      color: #1b1b1b;
+      white-space: nowrap;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 0.4em;
+      align-items: center;
+    }
+
+    /* Hamburger Toggle Button */
+    .hamburger-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0.35em;
+      flex-direction: column;
+      gap: 4px;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .hamburger-btn span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background-color: #1b1b1b;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger-btn.active span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-btn.active span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Mobile Dropdown Nav */
+    .header-dropdown {
+      display: none;
+      flex-direction: column;
+      gap: 0.4em;
+      padding-top: 0.6em;
+      margin-top: 0.5em;
+      border-top: 1px solid #1b1b1b15;
+      width: 100%;
+      animation: fadeInDown 0.25s ease-out forwards;
+    }
+
+    .header-dropdown.open {
+      display: flex;
+    }
+
+    .header-dropdown .site-btn {
+      width: 100%;
+      text-align: center;
+      padding: 0.5em 1em;
+      font-size: 0.78em;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ─── UNIFORM SITE BUTTON SYSTEM ─── */
+    .site-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35em;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: -0.8px;
+      font-size: 0.8em;
+      padding: 0.32em 0.8em;
+      border-radius: 1em;
+      color: #1b1b1b;
+      border: 1px #1b1b1b25 solid;
+      background: transparent;
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.25s ease;
+    }
+
+    .site-btn:hover {
+      color: #1b1b1b;
+      border-color: #1b1b1b50;
+      background-color: #1b1b1b10;
+      transform: scale(1.02);
+    }
+
+    .site-btn.dark {
+      background-color: #1b1b1b;
+      color: #ffffff;
+      border-color: #1b1b1b;
+    }
+
+    .site-btn.dark:hover {
+      background-color: #333333;
+      color: #ffffff;
+      border-color: #333333;
+    }
+
+    /* ─── SLEEK HERO AVATAR SECTION ─── */
+    .vinyl-hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4em 0;
+      text-align: center;
+    }
+
+    .hero-avatar-wrapper {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      padding: 3.5px;
+      background: linear-gradient(135deg, #187A4D 0%, #C54B9C 50%, #EF3E2D 100%);
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+      margin-bottom: 0.45em;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .hero-avatar-wrapper[data-theme="green"] {
+      background: #187A4D;
+    }
+
+    .hero-avatar-wrapper[data-theme="magenta"] {
+      background: #C54B9C;
+    }
+
+    .hero-avatar-wrapper[data-theme="red"] {
+      background: #EF3E2D;
+    }
+
+    .hero-avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #1b1b1b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-title-main {
+      font-size: 1.9em;
+      font-weight: 700;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -1.5px;
+      color: #1b1b1b;
+      margin-bottom: 0.08em;
+    }
+
+    .hero-sub-main {
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: -0.8px;
+      color: #1b1b1b;
+      margin-bottom: 0.4em;
+    }
+
+    .color-swatch-picker {
+      display: flex;
+      gap: 0.4em;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swatch {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid rgba(27, 27, 27, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .swatch:hover {
+      transform: scale(1.2);
+    }
+
+    .swatch-gradient {
+      background: linear-gradient(135deg, #187A4D, #C54B9C, #EF3E2D);
+    }
+
+    .swatch-green {
+      background-color: #187A4D;
+    }
+
+    .swatch-magenta {
+      background-color: #C54B9C;
+    }
+
+    .swatch-red {
+      background-color: #EF3E2D;
+    }
+
+    /* ─── CARDS STACKED VERTICALLY ─── */
+    .card-block {
+      background-color: rgba(255, 252, 245, 0.6);
+      border: 1px solid #1b1b1b12;
+      border-radius: 0.65em;
+      padding: 0.9em 1.15em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55em;
+    }
+
+    h2.card-title-heading {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.8px;
+      color: #1b1b1b;
+      border: 1px #1b1b1b25 solid;
+      padding: 0.18em 0.6em;
+      border-radius: 1em;
+      width: fit-content;
+      margin-bottom: 0.12em;
+    }
+
+    .narrative-quote {
+      font-family: "Crimson Pro", serif;
+      font-size: 1em;
+      font-weight: 300;
+      line-height: 1.4;
+      font-style: italic;
+      padding: 0.55em 0.75em;
+      background: rgba(27, 27, 27, 0.03);
+      border-left: 2px solid #1b1b1b;
+      border-radius: 0 0.4em 0.4em 0;
+    }
+
+    .paragraph-text {
+      font-size: 0.8em;
+      line-height: 1.4;
+      letter-spacing: 0.1px;
+      color: #1b1b1b;
+    }
+
+    .paragraph-text p {
+      margin-bottom: 0.4em;
+    }
+
+    .paragraph-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ─── GENRE BADGES ─── */
+    .genres-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 0.22em;
+    }
+
+    .genre-badge {
+      font-size: 0.6em;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.16em 0.5em;
+      border-radius: 1em;
+      color: #1b1b1b;
+      border: 1px solid #1b1b1b25;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* ─── 4-COLUMN GRILLA PARA PLATAFORMAS ─── */
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5em;
+    }
+
+    @media (max-width: 768px) {
+      .platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .platform-item {
+      display: flex;
+      align-items: center;
+      gap: 0.55em;
+      padding: 0.45em 0.7em;
+      background-color: rgba(255, 255, 255, 0.75);
+      border: 1px solid #1b1b1b18;
+      border-radius: 0.5em;
+      text-decoration: none;
+      color: #1b1b1b;
+      font-size: 0.76em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      transition: all 0.25s ease;
+    }
+
+    .platform-item:hover {
+      background-color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(27, 27, 27, 0.08);
+      border-color: #1b1b1b40;
+    }
+
+    .platform-svg-icon {
+      width: 15px;
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1b1b1b;
+      flex-shrink: 0;
+    }
+
+    .platform-svg-icon svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    /* ─── 3-COLUMN GRILLA PARA SHOWS ─── */
+    .sessions-links-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5em;
+    }
+
+    @media (max-width: 768px) {
+      .sessions-links-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .session-link-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.2em;
+      padding: 0.5em 0.75em;
+      background-color: rgba(255, 255, 255, 0.75);
+      border: 1px solid #1b1b1b18;
+      border-radius: 0.5em;
+      text-decoration: none;
+      color: #1b1b1b;
+      transition: all 0.25s ease;
+    }
+
+    .session-link-card:hover {
+      background-color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(27, 27, 27, 0.08);
+      border-color: #1b1b1b45;
+    }
+
+    .session-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .session-card-title {
+      font-size: 0.78em;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+      color: #1b1b1b;
+    }
+
+    .session-card-arrow {
+      font-size: 0.76em;
+      font-weight: 700;
+      color: #1b1b1b70;
+    }
+
+    .session-card-meta {
+      font-size: 0.7em;
+      color: #1b1b1b80;
+      display: flex;
+      gap: 0.4em;
+      align-items: center;
+    }
+
+    .session-card-badge {
+      font-size: 0.61em;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.1em 0.4em;
+      border-radius: 1em;
+      background-color: #1b1b1b10;
+      border: 1px solid #1b1b1b20;
+    }
+
+    /* ─── PRESS PHOTOS GRID ─── */
+    .press-photos-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5em;
+    }
+
+    .press-photo-card {
+      position: relative;
+      border-radius: 0.45em;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      border: 1px solid #1b1b1b15;
+      background: #e0e0e0;
+    }
+
+    .press-photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-download-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .press-photo-card:hover .photo-download-overlay {
+      opacity: 1;
+    }
+
+    /* ─── FOOTER CONTACT SECTION ─── */
+    .contact-footer-block {
+      text-align: center;
+      padding: 1.15em 1.15em;
+      background-color: #1b1b1b;
+      color: #ffffff;
+      border-radius: 0.6em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45em;
+    }
+
+    .contact-footer-block h3 {
+      font-size: 1.1em;
+      font-weight: 600;
+      letter-spacing: -0.8px;
+      text-transform: uppercase;
+    }
+
+    .contact-footer-block p {
+      max-width: 480px;
+      font-size: 0.75em;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.3;
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 0.55em;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.15em;
+    }
+
+    .contact-footer-block .site-btn {
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: transparent;
+      border-radius: 1em;
+      padding: 0.32em 0.9em;
+      font-size: 0.76em;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+
+    .contact-footer-block .site-btn:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.65);
+      color: #ffffff;
+    }
+
+    footer.site-footer {
+      text-align: center;
+      font-size: 0.68em;
+      color: #1b1b1b80;
+      margin-top: 0.05em;
+      padding-bottom: 0.2em;
+    }
+
+    /* ─── RESPONSIVE MOBILE & TABLET STYLES ─── */
+    @media (max-width: 768px) {
+      body {
+        padding: 0.75em 0.6em;
+      }
+
+      .container {
+        padding: 0 0.25em;
+        gap: 0.75em;
+      }
+
+      .press-photos-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.5em 0.4em;
+      }
+
+      .container {
+        padding: 0 0.15em;
+        gap: 0.65em;
+      }
+
+      .header-bar {
+        padding: 0.5em 0.85em;
+        border-radius: 1.25em;
+      }
+
+      .header-actions {
+        display: none;
+      }
+
+      .hamburger-btn {
+        display: flex;
+      }
+
+      .card-block {
+        padding: 0.75em 0.85em;
+        gap: 0.45em;
+      }
+
+      .press-photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-title-main {
+        font-size: 1.6em;
+      }
+
+      .hero-sub-main {
+        font-size: 0.75rem;
+      }
+
+      .contact-footer-block {
+        padding: 0.9em 0.85em;
+      }
+    }
+
+    /* ─── PRINT STYLES (INCREMENTAL FONT & SPACE ENHANCEMENT FOR 1-PAGE OUTPUT) ─── */
+    @media print {
+      @page {
+        margin: 2mm 5mm 2mm 5mm;
+        size: A4 portrait;
+      }
+
+      body {
+        background: #ffffff !important;
+        color: #1b1b1b !important;
+        padding: 0 1.5mm !important;
+        animation: none !important;
+        font-size: 11.8px !important;
+        line-height: 1.35 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        gap: 0.6em !important;
+      }
+
+      .header-bar,
+      .color-swatch-picker,
+      .photo-download-overlay,
+      button.site-btn {
+        display: none !important;
+      }
+
+      .vinyl-hero-section {
+        padding: 0.2em 0 !important;
+      }
+
+      .hero-avatar-wrapper {
+        width: 88px !important;
+        height: 88px !important;
+        margin-bottom: 0.25em !important;
+        box-shadow: none !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .hero-title-main {
+        font-size: 1.82em !important;
+        margin-bottom: 0.04em !important;
+      }
+
+      .hero-sub-main {
+        font-size: 0.82em !important;
+        margin-bottom: 0.25em !important;
+      }
+
+      .card-block {
+        background-color: #ffffff !important;
+        border: 1px solid #e0e0e0 !important;
+        box-shadow: none !important;
+        padding: 0.65em 0.95em !important;
+        gap: 0.48em !important;
+        margin-bottom: 0 !important;
+      }
+
+      h2.card-title-heading {
+        font-size: 0.8em !important;
+        padding: 0.16em 0.6em !important;
+        margin-bottom: 0.15em !important;
+      }
+
+      .narrative-quote {
+        padding: 0.45em 0.72em !important;
+        font-size: 0.98em !important;
+        line-height: 1.35 !important;
+      }
+
+      .paragraph-text {
+        font-size: 0.82em !important;
+        line-height: 1.38 !important;
+      }
+
+      .paragraph-text p {
+        margin-bottom: 0.32em !important;
+      }
+
+      .genres-list {
+        gap: 0.25em !important;
+      }
+
+      .genre-badge {
+        font-size: 0.65em !important;
+        padding: 0.15em 0.48em !important;
+      }
+
+      .platforms-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0.42em !important;
+      }
+
+      .platform-item {
+        padding: 0.42em 0.7em !important;
+        font-size: 0.78em !important;
+      }
+
+      .sessions-links-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.42em !important;
+      }
+
+      .session-link-card {
+        padding: 0.42em 0.7em !important;
+      }
+
+      .session-card-title {
+        font-size: 0.78em !important;
+      }
+
+      .session-card-meta {
+        font-size: 0.7em !important;
+      }
+
+      .press-photos-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 0.42em !important;
+      }
+
+      .press-photo-card {
+        aspect-ratio: 1 / 1 !important;
+      }
+
+      .contact-footer-block {
+        padding: 0.75em 0.9em !important;
+        gap: 0.4em !important;
+        background-color: #1b1b1b !important;
+        color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .contact-footer-block h3 {
+        font-size: 1.08em !important;
+      }
+
+      .contact-footer-block p {
+        font-size: 0.78em !important;
+      }
+
+      .contact-footer-block .site-btn {
+        padding: 0.32em 0.85em !important;
+        font-size: 0.78em !important;
+      }
+
+      footer.site-footer {
+        margin-top: 0.04em !important;
+        padding-bottom: 0.02em !important;
+        font-size: 0.66em !important;
+      }
+
+      a {
+        text-decoration: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header Bar -->
+    <header class="header-bar" id="headerBar">
+      <div class="header-main">
+        <div class="logo-group">
+          <span class="logo-disc">📀</span>
+          <span class="logo-text">JUAN FALIBENE / PRESSKIT</span>
+        </div>
+        <div class="header-actions">
+          <button onclick="downloadPDF()" class="site-btn" title="Download PDF Version">
+            DOWNLOAD PDF
+          </button>
+          <a href="https://music.juanfalibene.com" target="_blank" class="site-btn">WEBSITE</a>
+          <a href="mailto:juanignaciofalibene@gmail.com" class="site-btn dark">BOOKING</a>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="header-dropdown" id="headerDropdown">
+        <button onclick="downloadPDF(); toggleMobileMenu();" class="site-btn">
+          DOWNLOAD PDF
+        </button>
+        <a href="https://music.juanfalibene.com" target="_blank" onclick="toggleMobileMenu()" class="site-btn">
+          WEBSITE
+        </a>
+        <a href="mailto:juanignaciofalibene@gmail.com" onclick="toggleMobileMenu()" class="site-btn dark">
+          EMAIL BOOKING
+        </a>
+        <a href="https://wa.me/34651552278?text=Hi%20Juan,%20I'm%20interested%20in%20booking%20a%20session!" target="_blank" onclick="toggleMobileMenu()" class="site-btn">
+          WHATSAPP BOOKING
+        </a>
+      </nav>
+    </header>
+
+    <!-- Sleek Compact Hero Section -->
+    <section class="vinyl-hero-section">
+      <div class="hero-avatar-wrapper" id="heroAvatar" data-theme="gradient">
+        <div class="hero-avatar-inner">
+          <img src="presskit/pics/juanfalibene_dj_01_transparency.png" alt="Juan Falibene DJ">
+        </div>
+      </div>
+
+      <h1 class="hero-title-main">JUAN FALIBENE</h1>
+      <p class="hero-sub-main">Disc Jockey & Music Selector — Barcelona</p>
+
+      <div class="color-swatch-picker">
+        <span class="swatch swatch-gradient" title="Gradient Border" onclick="setVinylTheme('gradient')"></span>
+        <span class="swatch swatch-green" title="Green Border" onclick="setVinylTheme('green')"></span>
+        <span class="swatch swatch-magenta" title="Magenta Border" onclick="setVinylTheme('magenta')"></span>
+        <span class="swatch swatch-red" title="Red Border" onclick="setVinylTheme('red')"></span>
+      </div>
+    </section>
+
+    <!-- 1. Short Bio -->
+    <section class="card-block">
+      <h2 class="card-title-heading">SHORT BIO</h2>
+      <div class="narrative-quote">
+        "My focus revolves around selection and musical narrative, with sessions that span soul, funk, jazz, rare groove, maintaining a dedicated line oriented towards listening. I dive deep into the origin of samples, seeking the link between the organic and the electronic."
+      </div>
+      <div class="genres-list">
+        <span class="genre-badge">#SOUL</span>
+        <span class="genre-badge">#FUNK</span>
+        <span class="genre-badge">#DISCO</span>
+        <span class="genre-badge">#RAREGROOVE</span>
+        <span class="genre-badge">#HOUSE</span>
+        <span class="genre-badge">#DEEPHOUSE</span>
+      </div>
+    </section>
+
+    <!-- 2. Full Biography -->
+    <section class="card-block">
+      <h2 class="card-title-heading">FULL BIOGRAPHY</h2>
+      <div class="paragraph-text">
+        <p>Juan Falibene's journey is one of deep passion, exploration, and an endless loop of listening, selecting, mixing, and sharing music. Immersing himself in Soul, Funk, Modern Soul, Rare Groove, and Jazz, his focus is on creating meaningful connections through sound and sharing it with others.</p>
+        <p>Alongside organic sounds, Juan maintains a strong connection to club culture. His sets are a seamless fusion of organic and electronic elements, drawing heavily from Disco and House music. He excels at blending sampled material with the vibrant energy and texture of the dancefloor.</p>
+        <p>Held a prominent presence at Café Berlin Music Club in Madrid (2016–2019), sharing the stage with Folamour, Hugo LX, Nickodemus, Pabels, and Manu Desrets. Collaborating with radio stations across Madrid, Barcelona, Glasgow, and London, he is currently based in Barcelona curating unique listening sessions and creative collaborations.</p>
+      </div>
+    </section>
+
+    <!-- 3. Music Platforms & Links (Grilla de 4 Columnas) -->
+    <section class="card-block">
+      <h2 class="card-title-heading">MUSIC PLATFORMS & LINKS</h2>
+      <div class="platforms-grid">
+
+        <a href="https://music.juanfalibene.com" target="_blank" class="platform-item">
+          <span class="platform-svg-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#187A4D"/><circle cx="12" cy="12" r="4" fill="#ffffff" opacity="0.9"/></svg>
+          </span>
+          <span>Website</span>
+        </a>
+
+        <a href="https://soundcloud.com/juanfalibene" target="_blank" class="platform-item">
+          <span class="platform-svg-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#EF3E2D"/><circle cx="12" cy="12" r="4" fill="#ffffff" opacity="0.9"/></svg>
+          </span>
+          <span>SoundCloud</span>
+        </a>
+
+        <a href="https://www.mixcloud.com/juanfalibene/" target="_blank" class="platform-item">
+          <span class="platform-svg-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#C54B9C"/><circle cx="12" cy="12" r="4" fill="#ffffff" opacity="0.9"/></svg>
+          </span>
+          <span>Mixcloud</span>
+        </a>
+
+        <a href="https://open.spotify.com/user/11101659890" target="_blank" class="platform-item">
+          <span class="platform-svg-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#279E00"/><circle cx="12" cy="12" r="4" fill="#ffffff" opacity="0.9"/></svg>
+          </span>
+          <span>Spotify</span>
+        </a>
+
+        <a href="https://ra.co/dj/juanfalibene" target="_blank" class="platform-item">
+          <span class="platform-svg-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#8A4EB5"/><circle cx="12" cy="12" r="4" fill="#ffffff" opacity="0.9"/></svg>
+          </span>
+          <span>Resident Advisor</span>
+        </a>
+
+        <a href="https://www.instagram.com/juanfalibene/" target="_blank" class="platform-item">
+          <span class="platform-svg-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#E8956C"/><circle cx="12" cy="12" r="4" fill="#ffffff" opacity="0.9"/></svg>
+          </span>
+          <span>Instagram</span>
+        </a>
+
+        <a href="https://linktr.ee/juanfalibene" target="_blank" class="platform-item">
+          <span class="platform-svg-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#2B5C92"/><circle cx="12" cy="12" r="4" fill="#ffffff" opacity="0.9"/></svg>
+          </span>
+          <span>Linktree</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 4. Featured Sessions & Mixes (Grilla de 3 Columnas - 6 Lanzamientos Curados) -->
+    <section class="card-block">
+      <h2 class="card-title-heading">FEATURED SESSIONS & MIXES</h2>
+      <div class="sessions-links-grid">
+
+        <a href="https://www.nts.live/shows/your-specialist-subject-ii/episodes/your-specialist-subject-ii-dust2dust-w-juan-falibene-12th-april-2026"
+          target="_blank" class="session-link-card">
+          <div class="session-card-header">
+            <span class="session-card-title">NTS Radio: DUST2DUST</span>
+            <span class="session-card-arrow">↗</span>
+          </div>
+          <div class="session-card-meta">
+            <span class="session-card-badge">RADIO</span>
+            <span>Soul • Funk • Rare Groove</span>
+          </div>
+        </a>
+
+        <a href="https://soundcloud.com/juanfalibene/disco-between-cafe" target="_blank" class="session-link-card">
+          <div class="session-card-header">
+            <span class="session-card-title">Disco Between Cafe</span>
+            <span class="session-card-arrow">↗</span>
+          </div>
+          <div class="session-card-meta">
+            <span class="session-card-badge">MIX</span>
+            <span>Disco-House • Disco-Funk</span>
+          </div>
+        </a>
+
+        <a href="https://www.mixcloud.com/juanfalibene/10y-house/" target="_blank" class="session-link-card">
+          <div class="session-card-header">
+            <span class="session-card-title">10Y / HOUSE</span>
+            <span class="session-card-arrow">↗</span>
+          </div>
+          <div class="session-card-meta">
+            <span class="session-card-badge">MIX</span>
+            <span>House • Balearic • Jazz House</span>
+          </div>
+        </a>
+
+        <a href="https://soundcloud.com/radiobuenavida/sounds-healing-mixtape-w-juan-falibene-radio-buena-vida-270123"
+          target="_blank" class="session-link-card">
+          <div class="session-card-header">
+            <span class="session-card-title">Radio Buena Vida: Sounds Healing</span>
+            <span class="session-card-arrow">↗</span>
+          </div>
+          <div class="session-card-meta">
+            <span class="session-card-badge">RADIO</span>
+            <span>Soul • Funk • Jazz</span>
+          </div>
+        </a>
+
+        <a href="https://noodsradio.com/shows/espressoul-29th-november-22" target="_blank" class="session-link-card">
+          <div class="session-card-header">
+            <span class="session-card-title">NOODS Radio: Espressoul</span>
+            <span class="session-card-arrow">↗</span>
+          </div>
+          <div class="session-card-meta">
+            <span class="session-card-badge">RADIO</span>
+            <span>Soul • Funk • Jazz-Rock</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=5BiBmhEs_iM" target="_blank" class="session-link-card">
+          <div class="session-card-header">
+            <span class="session-card-title">La Radio Live #090</span>
+            <span class="session-card-arrow">↗</span>
+          </div>
+          <div class="session-card-meta">
+            <span class="session-card-badge">VIDEO</span>
+            <span>Soul • Funk • Live Video Set</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 5. Press Photos Grid -->
+    <section class="card-block">
+      <h2 class="card-title-heading">PRESS PHOTOS</h2>
+      <div class="press-photos-grid">
+        <div class="press-photo-card">
+          <img src="presskit/pics/juanfalibene_dj_02.jpg" alt="Juan Falibene Press Photo 1">
+          <div class="photo-download-overlay">
+            <a href="presskit/pics/juanfalibene_dj_02.jpg" download class="site-btn dark">DOWNLOAD</a>
+          </div>
+        </div>
+        <div class="press-photo-card">
+          <img src="presskit/pics/juanfalibene_dj_03.jpg" alt="Juan Falibene Press Photo 2">
+          <div class="photo-download-overlay">
+            <a href="presskit/pics/juanfalibene_dj_03.jpg" download class="site-btn dark">DOWNLOAD</a>
+          </div>
+        </div>
+        <div class="press-photo-card">
+          <img src="presskit/pics/juanfalibene_dj_04.JPG" alt="Juan Falibene Press Photo 3">
+          <div class="photo-download-overlay">
+            <a href="presskit/pics/juanfalibene_dj_04.JPG" download class="site-btn dark">DOWNLOAD</a>
+          </div>
+        </div>
+        <div class="press-photo-card">
+          <img src="presskit/pics/juanfalibene_dj_vinyl_01.png" alt="Juan Falibene Press Photo 4">
+          <div class="photo-download-overlay">
+            <a href="presskit/pics/juanfalibene_dj_vinyl_01.png" download class="site-btn dark">DOWNLOAD</a>
+          </div>
+        </div>
+        <div class="press-photo-card">
+          <img src="presskit/pics/juanfalibene_dj_05.jpg" alt="Juan Falibene Press Photo 5">
+          <div class="photo-download-overlay">
+            <a href="presskit/pics/juanfalibene_dj_05.jpg" download class="site-btn dark">DOWNLOAD</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Technical Rider & Setup -->
+    <section class="card-block">
+      <h2 class="card-title-heading">TECHNICAL RIDER & SETUP</h2>
+      <div class="paragraph-text">
+        <p><strong>Format Options:</strong> Vinyl Only, Hybrid (Vinyl + Digital), or Digital (CDJ/XDJ).</p>
+        <p><strong>Setup Requirements:</strong> 2x Technics SL-1200/1210 Turntables, 1x Rotary/Club Mixer (MasterSounds, E&S, Allen & Heath, Pioneer DJM), 2x Pioneer CDJ-2000NXS2/3000, high-quality booth monitors.</p>
+      </div>
+    </section>
+
+    <!-- 7. Contact & Booking Section -->
+    <section class="contact-footer-block">
+      <h3>BOOKING & INQUIRIES</h3>
+      <p>Feel free to reach out for bookings, collaborations, or a chat!</p>
+      <div class="contact-actions">
+        <a href="mailto:juanignaciofalibene@gmail.com" class="site-btn btn-cta">
+          EMAIL BOOKING
+        </a>
+        <a href="https://wa.me/34651552278?text=Hi%20Juan,%20I'm%20interested%20in%20booking%20a%20session!" target="_blank" class="site-btn btn-cta">
+          WHATSAPP BOOKING
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>© 2026 Juan Falibene • Since 2016 for the love of sharing music, thanks for listening</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function setVinylTheme(theme) {
+      document.getElementById('heroAvatar').setAttribute('data-theme', theme);
+    }
+
+    function downloadPDF() {
+      window.print();
+    }
+
+    function toggleMobileMenu() {
+      const btn = document.getElementById('hamburgerBtn');
+      const dropdown = document.getElementById('headerDropdown');
+      const headerBar = document.getElementById('headerBar');
+      if (btn && dropdown) {
+        btn.classList.toggle('active');
+        dropdown.classList.toggle('open');
+        if (headerBar) headerBar.classList.toggle('open');
+      }
+    }
+  </script>
+
+</body>
+
+</html>

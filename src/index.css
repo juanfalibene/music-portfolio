@@ -211,10 +211,12 @@ section.video {
 
 .home-hero {
   width: 100%;
-  padding: 3em 0 4em 0;
+  padding: 3em 0 3em 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .home-hero h1 {
@@ -1483,21 +1485,204 @@ footer img.img-profile:hover {
 
 .presskit-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .presskit-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #1b1b1b15;
+  aspect-ratio: 1 / 1;
+  background-color: #e0e0e0;
 }
 
 .presskit-item img {
   width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
+  height: 100%;
+  border-radius: 0;
   object-fit: cover;
-  aspect-ratio: 1 / 1;
+  transition: transform 0.4s ease;
 }
+
+.presskit-item:hover img {
+  transform: scale(1.05);
+}
+
+.presskit-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.presskit-item:hover .presskit-item-overlay {
+  opacity: 1;
+}
+
+.presskit-item-overlay .copy-btn {
+  margin-top: 0;
+  background-color: #1b1b1b;
+  color: #ffffff;
+  border-color: #1b1b1b;
+}
+
+.presskit-item-overlay .copy-btn:hover {
+  background-color: #ffffff;
+  color: #1b1b1b;
+  border-color: #ffffff;
+}
+
+/* ─── PRESSKIT RIDER & BOOKING SECTIONS ─── */
+.presskit-section {
+  margin-top: 3rem;
+}
+
+.presskit-rider .rider-card.full-width {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rider-card {
+  background-color: rgba(255, 252, 245, 0.6);
+  border: 1px solid #1b1b1b15;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.rider-card h4 {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #1b1b1b;
+  margin-bottom: 0.75rem;
+}
+
+.rider-card p {
+  font-size: 0.9em;
+  color: #1b1b1b90;
+  line-height: 1.5;
+}
+
+.rider-formats {
+  font-size: 0.88em !important;
+  color: #1b1b1b90 !important;
+  line-height: 1.5;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #1b1b1b15;
+}
+
+.rider-formats strong {
+  color: #1b1b1b;
+}
+
+.rider-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rider-card ul li {
+  font-size: 0.88em;
+  color: #1b1b1b90;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.rider-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1b1b1b;
+}
+
+.rider-card ul li strong {
+  color: #1b1b1b;
+}
+
+/* Booking CTA Section */
+.presskit-booking {
+  background-color: #1b1b1b;
+  color: #ffffff;
+  border-radius: 0.85rem;
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.presskit-booking h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.presskit-booking p {
+  max-width: 520px;
+  font-size: 0.88em;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+.booking-cta-buttons {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.booking-btn {
+  margin-top: 0 !important;
+  padding: 0.45em 1.25em !important;
+  border-radius: 1.5em !important;
+  font-size: 0.85em !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.5px !important;
+  text-transform: uppercase !important;
+}
+
+.booking-btn.dark {
+  background-color: #ffffff !important;
+  color: #1b1b1b !important;
+  border-color: #ffffff !important;
+}
+
+.booking-btn.dark:hover {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  transform: scale(1.03) !important;
+}
+
+.booking-btn.wa-btn {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.booking-btn.wa-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  transform: scale(1.03) !important;
+}
+
+
