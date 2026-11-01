@@ -1,6 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const socialLinks = [
+  { name: "Linktree", href: "https://linktr.ee/juanfalibene", icon: "linktree" },
+  { name: "Instagram", href: "https://www.instagram.com/juanfalibene/", icon: "instagram" },
+  { name: "Resident Advisor", href: "https://ra.co/dj/juanfalibene", icon: "residentadvisor" },
+  { name: "Soundcloud", href: "https://soundcloud.com/juanfalibene", icon: "soundcloud" },
+  { name: "Mixcloud", href: "https://www.mixcloud.com/juanfalibene/", icon: "mixcloud" },
+  { name: "Spotify", href: "https://open.spotify.com/user/11101659890", icon: "spotify" },
+  { name: "Discava! (personal project)", href: "https://dev.juanfalibene.com/discava/index.html", icon: "discava" },
+];
+
+
 export const About = () => {
   return (
     <section className='about'>
@@ -75,69 +86,24 @@ export const About = () => {
         {/* Contenedor social independiente */}
         <div className='about-social'>
           <ul>
-            <li>
-              <a
-                href='https://linktr.ee/juanfalibene'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Linktree
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://www.instagram.com/juanfalibene/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://ra.co/dj/juanfalibene'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Resident Advisor
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://soundcloud.com/juanfalibene'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Soundcloud
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://www.mixcloud.com/juanfalibene/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Mixcloud
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://open.spotify.com/user/11101659890'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Spotify
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://dev.juanfalibene.com/discava/index.html'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Discava!
-              </a>
-            </li>
+            {socialLinks.map(({ name, href, icon }) => (
+              <li key={name}>
+                <a
+                  href={href}
+                  target='_blank'
+                  rel='noreferrer'
+                  aria-label={name}
+                  title={name}
+                >
+                  <img
+                    className='social-icon'
+                    src={`/img/icons/${icon}.svg`}
+                    alt=''
+                    loading='lazy'
+                  />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

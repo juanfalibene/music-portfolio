@@ -938,6 +938,17 @@ h2.page-title {
   transform: scale(1.02);
 }
 
+.about-social ul li a .social-icon {
+  display: block;
+  height: 1.25em;
+  width: 1.25em;
+  opacity: 0.85;
+}
+
+.about-social ul li a:hover .social-icon {
+  opacity: 1;
+}
+
 /* ─── RECOMMENDATIONS / PICKS ──────────────────────────────── */
 
 .recommendations-page {
