@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { ThemeToggle } from './ThemeToggle';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,6 +84,9 @@ export const Navbar = () => {
           >
             About
           </NavLink>
+        </li>
+        <li>
+          <ThemeToggle />
         </li>
       </ul>
     </nav>
