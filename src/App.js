@@ -1,10 +1,13 @@
 import { MyRoutes } from './router/MyRoutes';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <div className='layout'>
-      <MyRoutes />
-    </div>
+    <ThemeProvider>
+      <div className='layout'>
+        <MyRoutes />
+      </div>
+    </ThemeProvider>
   );
 }
 

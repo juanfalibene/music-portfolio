@@ -1,11 +1,14 @@
 import React from 'react';
+import { useTheme } from '../../context/ThemeContext';
+import { themedEmbed } from '../../utils/themedEmbed';
 
 export const SpotifyPlayer = ({ title, embed }) => {
+  const { theme } = useTheme();
   return (
     <div className='player'>
       <iframe
         title={title}
-        src={embed}
+        src={themedEmbed(embed, theme)}
         width='100%'
         height='152'
         frameBorder='0'

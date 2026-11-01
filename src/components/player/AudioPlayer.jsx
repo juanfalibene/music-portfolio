@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTheme } from '../../context/ThemeContext';
+import { themedEmbed } from '../../utils/themedEmbed';
 
 export const AudioPlayer = ({ title, embed }) => {
+  const { theme } = useTheme();
   return (
     <div className='player'>
       <iframe
@@ -8,7 +11,7 @@ export const AudioPlayer = ({ title, embed }) => {
         width='100%'
         height='120'
         frameBorder='0'
-        src={embed}
+        src={themedEmbed(embed, theme)}
       ></iframe>
     </div>
   );

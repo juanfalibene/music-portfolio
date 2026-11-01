@@ -1,6 +1,9 @@
 import React from "react";
+import { useTheme } from '../../context/ThemeContext';
+import { themedEmbed } from '../../utils/themedEmbed';
 
 export const AudioPlayerHome = ({ title, embed, category }) => {
+  const { theme } = useTheme();
   return (
     <div className='spotlight-iframe' style={{ flexGrow: 2 }}>
       <iframe
@@ -11,7 +14,7 @@ export const AudioPlayerHome = ({ title, embed, category }) => {
         scrolling='no'
         frameBorder='0'
         allow='autoplay'
-        src={embed}
+        src={themedEmbed(embed, theme)}
       ></iframe>
     </div>
   );
