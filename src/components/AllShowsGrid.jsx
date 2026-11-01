@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { PlayerContext } from '../context/PlayerContext';
 
-export const AllShowsGrid = ({ shows }) => {
+export const AllShowsGrid = ({ shows, showFilters = false }) => {
   const { setActiveShow } = useContext(PlayerContext);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const filteredShows = shows.filter((show) => {
-    if (selectedCategory === 'all') return true;
+    if (!showFilters || selectedCategory === 'all') return true;
     if (!show.parentCategory) return true;
     if (Array.isArray(show.parentCategory)) {
       return show.parentCategory.includes(selectedCategory);
@@ -16,36 +16,38 @@ export const AllShowsGrid = ({ shows }) => {
 
   return (
     <div className='shows-container'>
-      <div className='category-filter-bar' role="tablist" aria-label="Category filter">
-        <button
-          type="button"
-          className={`filter-btn ${selectedCategory === 'all' ? 'active' : ''}`}
-          onClick={() => setSelectedCategory('all')}
-        >
-          All
-        </button>
-        <button
-          type="button"
-          className={`filter-btn filter-organica ${selectedCategory === 'organica' ? 'active' : ''}`}
-          onClick={() => setSelectedCategory('organica')}
-        >
-          Organic
-        </button>
-        <button
-          type="button"
-          className={`filter-btn filter-electronica ${selectedCategory === 'electronica' ? 'active' : ''}`}
-          onClick={() => setSelectedCategory('electronica')}
-        >
-          Electronic
-        </button>
-        <button
-          type="button"
-          className={`filter-btn filter-video ${selectedCategory === 'video' ? 'active' : ''}`}
-          onClick={() => setSelectedCategory('video')}
-        >
-          Video
-        </button>
-      </div>
+      {showFilters && (
+        <div className='category-filter-bar' role="tablist" aria-label="Category filter">
+          <button
+            type="button"
+            className={`filter-btn ${selectedCategory === 'all' ? 'active' : ''}`}
+            onClick={() => setSelectedCategory('all')}
+          >
+            All
+          </button>
+          <button
+            type="button"
+            className={`filter-btn filter-organica ${selectedCategory === 'organica' ? 'active' : ''}`}
+            onClick={() => setSelectedCategory('organica')}
+          >
+            Organic
+          </button>
+          <button
+            type="button"
+            className={`filter-btn filter-electronica ${selectedCategory === 'electronica' ? 'active' : ''}`}
+            onClick={() => setSelectedCategory('electronica')}
+          >
+            Electronic
+          </button>
+          <button
+            type="button"
+            className={`filter-btn filter-video ${selectedCategory === 'video' ? 'active' : ''}`}
+            onClick={() => setSelectedCategory('video')}
+          >
+            Video
+          </button>
+        </div>
+      )}
 
       <div className='shows-grid'>
         {filteredShows.map((show) => (

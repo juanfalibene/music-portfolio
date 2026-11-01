@@ -15,7 +15,7 @@ export const Home = () => {
         </h1>
       </div>
       <NextEventsList />
-      <AllShowsGrid shows={allShows} />
+      <AllShowsGrid shows={allShows} showFilters />
     </main>
   );
 };

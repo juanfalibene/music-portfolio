@@ -8,7 +8,7 @@ export const Mixes = () => {
       <div className='home-hero'>
         <h1>MIXES</h1>
       </div>
-      <AllShowsGrid shows={mixes} />
+      <AllShowsGrid shows={mixes} showFilters />
     </main>
   );
 };
