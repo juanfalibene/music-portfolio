@@ -275,6 +275,47 @@ section.video {
   opacity: 0.7;
 }
 
+.past-gigs-link-wrapper {
+  justify-content: space-between;
+
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.past-gigs-toggle {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.toggle-arrow.open {
+  transform: rotate(180deg);
+}
+
+.past-gigs-accordion {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
+}
+
+.past-gigs-accordion.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.past-gigs-accordion > .reco-items-list {
+  overflow: hidden;
+  min-height: 0;
+}
+
 .home-main {
   width: 100%;
   max-width: 1400px;

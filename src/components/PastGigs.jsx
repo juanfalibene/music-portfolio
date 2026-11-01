@@ -34,7 +34,7 @@ export const PastGigs = () => {
     <section className='page recommendations-page past-gigs-page'>
       <div className='recommendations-container'>
         <div className='reco-image-wrapper'>
-          <img src={hoveredImage} alt="Past Gig Flyer" />
+          <img src={hoveredImage} alt="Past Gig Flyer" decoding="async" />
         </div>
         <div className='reco-list-wrapper' ref={listRef}>
           <div className='reco-category'>
