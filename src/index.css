@@ -1784,13 +1784,6 @@ footer img.img-profile:hover {
 
 /* ─── THEME TOGGLE ─────────────────────────────────────────── */
 
-.header-actions {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5em;
-}
-
 .theme-toggle {
   display: inline-flex;
   align-items: center;
